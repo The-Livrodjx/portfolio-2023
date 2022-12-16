@@ -30,3 +30,4 @@ cancelBtn.addEventListener('click', () => {
   menuBtn.classList.remove("hide");
   menuList.classList.remove("show");
 })
+

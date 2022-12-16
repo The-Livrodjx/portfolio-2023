@@ -4,6 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:site_name" content="Portfólio Lucas Alexandre">
+  <meta property="og:title" content="Portfólio Lucas Alexandre">
+  <meta property="og:description" content="Portfólio Lucas Alexandre updated for 2023">
+  <meta property="og:image" content="./me.jpg">
+  <meta property="og:type" content="website" />
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="300">
+  <meta property="og:image:height" content="300">
+  <meta property="og:url" content="https://lucas-alexandre.netlify.app">
+  <meta name="description" content="Hi there, my name is Lucas and I am a Fullstack Developer from Brazil." />
   <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
   <title>Lucas Alexandre - Desenvolvedor Fullstack</title>
@@ -20,35 +30,35 @@
 
         <ul class="menuList">
           <div class="icon cancel-btn">
-            <i aria-hidden class="fas fa-times"></i>
+            <img src="./icons/close.png" loading="lazy" />
           </div>
 
-          <li><a href="/" class="scrollTo navLink"> Home </a></li>
-          <li><a href="/" class="scrollTo navLink"> About </a></li>
-          <li><a href="/" class="scrollTo navLink"> Projects </a></li>
-          <li><a href="/" class="scrollTo navLink"> Contact </a></li>
+          <li><a onclick="handleScrollTo(event, 'home')" class="scrollTo navLink"> Home </a></li>
+          <li><a onclick="handleScrollTo(event, 'about')" class="scrollTo navLink"> About </a></li>
+          <li><a onclick="handleScrollTo(event, 'projects')" class="scrollTo navLink"> Projects </a></li>
+          <li><a onclick="handleScrollTo(event, 'contact')" class="scrollTo navLink"> Contact </a></li>
 
         </ul>
 
         <div class="icon menu-btn">
-          <i aria-hidden class="fas fa-bars"></i>
+          <img src="./icons/menu.png" loading="lazy" />
         </div>
       </div>
     </nav>
   </header>
   <main>
-    <div class="home">
+    <div class="home" id="home">
       <div class="home-caption">
         <h1>WELCOME !</h1>
         <p>Hi there, my name is Lucas and I am a Fullstack Developer from Brazil. Lately my focus is helping people to
           improve their business by doing jobs such as systems, landing pages or APIs. I have a degree in systems
           analysis and development and I have professional experience since the beginning of 2020.</p>
-        <button>Know More</button>
+        <button onclick="handleScrollTo(event, 'about')">Know More</button>
       </div>
       <div></div>
     </div>
 
-    <div class="about">
+    <div class="about" id="about">
       <img src="./me.jpg" alt="">
       <h1>
         <a href="" class="typewrite" data-period="1000"
@@ -59,7 +69,7 @@
 
       <p>Yeah...I dont know how to describe my journey, so lets get started literally from the beginning...I started in
         the wonderful world of programming in 2018, using Python. Through that language I discovered that my vocation is
-        to write code that common people dont knows what the hells is going on, they just know that the job looks
+        to write code that common people dont know what the hells is going on, they just know that the job looks
         amazing when it is done.</p>
     </div>
 
@@ -152,10 +162,40 @@
           <p>
             Next.js is a flexible React framework that gives you building blocks to create fast web applications. </p>
         </div>
+
+        <div class="tool-card">
+          <img src="./icons/mysql.png" loading="lazy" alt="" />
+
+          <h2>MySQL</h2>
+          <p>
+            MySQL is a database management system.
+            It may be anything from a simple shopping list to a picture gallery or the vast amounts of information in a
+            corporate network. To add, access, and process data stored in a computer database, you need a database
+            management system such as MySQL Server. </p>
+        </div>
+        <div class="tool-card">
+          <img src="./icons/oracle.png" loading="lazy" alt="" />
+
+          <h2>OracleDB</h2>
+          <p>
+            An Oracle database is a collection of data treated as a unit. The purpose of a database is to store and
+            retrieve related information. A database server is the key to solving the problems of information
+            management. In general, a server reliably manages a large amount of data in a multiuser environment so that
+            many users can concurrently access the same data. </p>
+        </div>
+        <div class="tool-card">
+          <img src="./icons/mongo.png" loading="lazy" alt="" style="margin-top: 50px" />
+
+          <h2 style="margin-top: 50px">MongoDB</h2>
+          <p>
+            MongoDB is an open source NoSQL database management program. NoSQL is used as an alternative to traditional
+            relational databases. NoSQL databases are quite useful for working with large sets of distributed data.
+            MongoDB is a tool that can manage document-oriented information, store or retrieve information. </p>
+        </div>
       </div>
     </div>
-    
-    <div class="projects">
+
+    <div class="projects" id="projects">
       <h1>Projects that I have made</h1>
       <ul class="box-area">
         <li></li>
@@ -168,15 +208,37 @@
 
       <div class="project">
         <div>
-          <img src="./wtg.png" loading="lazy"/>
+          <img src="./wtg.png" loading="lazy" />
         </div>
-        <div>
+        <div class="project-description">
           <h2>Way To Go</h2>
-          <p>HTML stands for HyperText Markup Language. It is a standard markup language for web page creation. It
-            allows
-            the creation and structure of sections, paragraphs, and links using HTML elements (the building blocks of a
-            web page) such as tags and attributes. </p>
-          <a href="#">
+          <p>Way To Go, a vehicle rental platform, develops in this project a
+            customer journey page, where user enters his data such as cpf, zip code, telephone, etc. This data is
+            checked in services such as Serasa, Data Trust and to verify the
+            authenticity. It is also checked for this
+            process if there is proof of life that compares the face of the sent document with the face of the selfie
+            and the face at the bottom of the government (Serpro). </p>
+          <div class="icon-description">
+            <img src="./icons/chart-up.png" width="20px" height="20px" loading="lazy" />
+            <h3>Digital Marketing</h3>
+          </div>
+          <div class="icon-description">
+            <img src="./icons/wrench.png" loading="lazy" />
+            <h3>Technical Support</h3>
+          </div>
+          <div class="icon-description">
+            <img src="./icons/laptop.png" loading="lazy" />
+            <h3>Website Build</h3>
+          </div>
+          <div class="tech-icons">
+            <img src="./icons/html.png" width="20px" loading="lazy" />
+            <img src="./icons/css.png" width="20px" loading="lazy" />
+            <img src="./icons/js.png" width="20px" loading="lazy" />
+            <img src="./icons/angular.png" width="20px" loading="lazy" />
+            <img src="./icons/node.png" width="20px" loading="lazy" />
+            <img src="./icons/nestjs.png" width="20px" loading="lazy" />
+          </div>
+          <a href="https://wtglocadora.com.br" rel="nooper noreferrer" target="_blank">
             <span></span>
             <span></span>
             <span></span>
@@ -186,14 +248,29 @@
         </div>
       </div>
 
-      <div class="project">
-        <div>
+      <div class="project for-reverse">
+        <div class="project-description">
           <h2>Natan Assessoria</h2>
-          <p>HTML stands for HyperText Markup Language. It is a standard markup language for web page creation. It
-            allows
-            the creation and structure of sections, paragraphs, and links using HTML elements (the building blocks of a
-            web page) such as tags and attributes. </p>
-          <a href="#">
+          <p>
+            This project is a page for a client that provides advisory services, in this freelance I used pure HTML, CSS
+            (responsive design) and JS to make the frontend and Nestjs for an email sending API.</p>
+          <div class="icon-description">
+            <img src="./icons/chart-up.png" width="20px" height="20px" loading="lazy" />
+            <h3>Digital Marketing</h3>
+          </div>
+
+          <div class="icon-description">
+            <img src="./icons/laptop.png" loading="lazy" />
+            <h3>Website Build</h3>
+          </div>
+          <div class="tech-icons">
+            <img src="./icons/html.png" width="20px" loading="lazy" />
+            <img src="./icons/css.png" width="20px" loading="lazy" />
+            <img src="./icons/js.png" width="20px" loading="lazy" />
+            <img src="./icons/node.png" width="20px" loading="lazy" />
+            <img src="./icons/nestjs.png" width="20px" loading="lazy" />
+          </div>
+          <a href="https://natanassessoria.com.br" rel="nooper noreferrer" target="_blank">
             <span></span>
             <span></span>
             <span></span>
@@ -202,20 +279,37 @@
           </a>
         </div>
         <div>
-          <img src="./assessoria.png" loading="lazy"/>
+          <img src="./assessoria.png" loading="lazy" />
         </div>
       </div>
       <div class="project">
         <div>
-          <img src="./srpurificadores.png" loading="lazy"/>
+          <img src="./srpurificadores.png" loading="lazy" />
         </div>
-        <div>
+        <div class="project-description">
           <h2>S&R Purificadores</h2>
-          <p>HTML stands for HyperText Markup Language. It is a standard markup language for web page creation. It
-            allows
-            the creation and structure of sections, paragraphs, and links using HTML elements (the building blocks of a
-            web page) such as tags and attributes. </p>
-          <a href="#">
+          <p>
+            This project is a page for a client that sells water purifiers, in this freelance I used HTML, CSS
+            (responsive design) and pure JS to make the frontend and Nodejs for an API for sending emails. </p>
+          <div class="icon-description">
+            <img src="./icons/chart-up.png" width="20px" height="20px" loading="lazy" />
+            <h3>Digital Marketing</h3>
+          </div>
+          <div class="icon-description">
+            <img src="./icons/wrench.png" loading="lazy" />
+            <h3>Technical Support</h3>
+          </div>
+          <div class="icon-description">
+            <img src="./icons/laptop.png" loading="lazy" />
+            <h3>Website Build</h3>
+          </div>
+          <div class="tech-icons">
+            <img src="./icons/html.png" width="20px" loading="lazy" />
+            <img src="./icons/css.png" width="20px" loading="lazy" />
+            <img src="./icons/js.png" width="20px" loading="lazy" />
+            <img src="./icons/node.png" width="20px" loading="lazy" />
+          </div>
+          <a href="https://srpurificadores.com.br" rel="nooper noreferrer" target="_blank">
             <span></span>
             <span></span>
             <span></span>
@@ -225,14 +319,32 @@
         </div>
 
       </div>
-      <div class="project">
-        <div>
+      <div class="project for-reverse">
+        <div class="project-description">
           <h2>Finder Lanches</h2>
-          <p>HTML stands for HyperText Markup Language. It is a standard markup language for web page creation. It
-            allows
-            the creation and structure of sections, paragraphs, and links using HTML elements (the building blocks of a
-            web page) such as tags and attributes. </p>
-          <a href="#">
+          <p>Finder Lanches is a personal ecommerce project for a snack bar, it has a fully functional system that
+            connects to payment gateways, connects to a backend made in Nodejs and the frontend was made in Reactjs </p>
+          <div class="icon-description">
+            <img src="./icons/chart-up.png" width="20px" height="20px" loading="lazy" />
+            <h3>Digital Marketing</h3>
+          </div>
+          <div class="icon-description">
+            <img src="./icons/wrench.png" loading="lazy" />
+            <h3>Technical Support</h3>
+          </div>
+          <div class="icon-description">
+            <img src="./icons/laptop.png" loading="lazy" />
+            <h3>Website Build</h3>
+          </div>
+          <div class="tech-icons">
+            <img src="./icons/html.png" width="20px" loading="lazy" />
+            <img src="./icons/css.png" width="20px" loading="lazy" />
+            <img src="./icons/js.png" width="20px" loading="lazy" />
+            <img src="./icons/node.png" width="20px" loading="lazy" />
+            <img src="./icons/react.png" width="20px" loading="lazy" />
+          </div>
+          <a href="https://github.com/The-Livrodjx/finder-lanches" rel="nooper noreferrer" target="_blank">
+
             <span></span>
             <span></span>
             <span></span>
@@ -241,22 +353,27 @@
           </a>
         </div>
         <div>
-          <img src="./finder-lanches.png" loading="lazy"/>
+          <img src="./finder-lanches.png" loading="lazy" />
         </div>
       </div>
     </div>
 
-    <div class="contact-me">
+    <div class="contact-me" id="contact">
       <div class="social-icons">
         <div>
           <span>lucasoliverbr@gmail.com</span>
-          <img src="./icons/o-email.png" />
+          <img src="./icons/o-email.png" title="Email" />
         </div>
         <div>
-          <img src="./icons/linkedin.png" loading="lazy" />
+          <img src="./icons/linkedin.png" title="LinkedIn"
+            onclick="window.open('https://www.linkedin.com/in/lucas-alexandre-0a4162181/')" loading="lazy" />
         </div>
         <div>
-          <img src="./icons/github.png" loading="lazy" />
+          <img src="./icons/cv.png" title="Curriculum" onclick="downloadCV()" loading="lazy" />
+        </div>
+        <div>
+          <img src="./icons/github.png" title="Github" onclick="window.open('https://github.com/The-Livrodjx')"
+            loading="lazy" />
         </div>
       </div>
       <div>
@@ -271,10 +388,31 @@
   <script type="module" src="./js/main.js"></script>
   <script>
     addEventListener('DOMContentLoaded', () => {
-      particlesJS.load('particles-js', 'particles.json', () => {
-        console.log('particles.json loaded...')
-      })
-    })
+
+      if (window.innerWidth < 600) {
+        particlesJS.load('particles-js', 'mobile-particles.json', () => {
+          console.log('particles for mobiles loaded');
+        });
+      } else {
+        particlesJS.load('particles-js', 'particles.json', () => {
+          console.log('particles.json loaded...')
+        })
+      }
+    });
+
+    function handleScrollTo(event, elementId) {
+      event.preventDefault();
+      document.getElementById(`${elementId}`).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function downloadCV() {
+      let a = document.createElement('a');
+      a.href = "./Curriculum Lucas Alexandre.pdf";
+      a.download = "Curriculum Lucas Alexandre";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
   </script>
 </body>
 

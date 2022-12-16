@@ -25,6 +25,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -276,6 +277,7 @@ canvas.particles-js-canvas-el {
 }
 
 .projects {
+  position: relative;
   width: 100%;
   height: auto;
   min-height: 500px;
@@ -291,6 +293,7 @@ canvas.particles-js-canvas-el {
   font-weight: 900;
   font-size: 3rem;
   margin-bottom: 15rem;
+  text-align: center;
 }
 
 .project {
@@ -311,6 +314,7 @@ canvas.particles-js-canvas-el {
   width: 550px;
 }
 
+
 .project div h2 {
   margin-bottom: 15px;
 }
@@ -319,27 +323,57 @@ canvas.particles-js-canvas-el {
   margin-bottom: 30px;
 }
 
+.project .project-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.project .icon-description {
+  display: inline-flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.project .icon-description img{
+  width: 28px !important; 
+  margin-right: 0.5rem;
+}
+
+.tech-icons {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.tech-icons img {
+  width: 28px !important;
+}
+
 .project div a {
   position: relative;
   display: inline-block;
   padding: 10px 30px;
+  width: 150px;
   text-decoration: none;
   color: #fff;
   cursor: pointer;
-  background: #111;
+  background: rgb(110, 72, 237);
+  border-radius: 5px;
   transition: 0.5s;
+  margin-top: 1rem;
 }
 
 .project div a span {
   display: block;
   position: absolute;
-  background: rgb(110, 72, 237);
+  background: #fff;
 }
 
 .project div a span:nth-child(1) {
   left: 0;
   bottom: 0;
-  width: 1px;
+  width: 2px;
   height: 100%;
   transform: scaleY(0);
   transform-origin: top;
@@ -352,13 +386,11 @@ canvas.particles-js-canvas-el {
   transition: transform 0.5s;
 }
 
-
-
 .project div a span:nth-child(2) {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 1px;
+  height: 2px;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.5s
@@ -373,7 +405,7 @@ canvas.particles-js-canvas-el {
 .project div a span:nth-child(3) {
   right: 0;
   bottom: 0;
-  width: 1px;
+  width: 2px;
   height: 100%;
   transform: scaleY(0);
   transform-origin: top;
@@ -482,6 +514,7 @@ canvas.particles-js-canvas-el {
 .social-icons {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   align-items: center;
   z-index: 999999;
 }
@@ -498,10 +531,26 @@ canvas.particles-js-canvas-el {
 .social-icons div:nth-child(1) img {
   margin-left: 0.5rem;
 }
+.social-icons div:nth-child(1) img:hover{
+  cursor: pointer;
+  filter: invert(43%) sepia(13%) saturate(2859%) hue-rotate(304deg) brightness(94%) contrast(115%);
+}
+
 .social-icons div:nth-child(2) img:hover{
   cursor: pointer;
   filter: invert(34%) sepia(43%) saturate(2542%) hue-rotate(175deg) brightness(88%) contrast(101%);
 }
+
+.social-icons div:nth-child(3) img:hover{
+  cursor: pointer;
+  filter: invert(33%) sepia(59%) saturate(6515%) hue-rotate(245deg) brightness(96%) contrast(92%);
+}
+
+.social-icons div:nth-child(4) img:hover{
+  cursor: pointer;
+  filter: invert(7%) sepia(4%) saturate(26%) hue-rotate(314deg) brightness(92%) contrast(84%);
+}
+
 
 @keyframes animate {
   0% {
